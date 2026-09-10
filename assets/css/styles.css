@@ -165,7 +165,7 @@ svg{ display:block; }
   display:flex; justify-content:space-between; align-items:center;
   padding-bottom:34px; font-family:'Archivo',sans-serif; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted2);
 }
-@media (max-width:640px){ .hero-foot-inner{ flex-direction:column; gap:6px; align-items:flex-start; } }
+@media (max-width:640px){ .hero-foot-inner{ flex-direction:column; gap:6px; align-items:flex-start; padding-right:84px; } }
 
 .scroll-cue{ position:absolute; left:50%; bottom:14px; transform:translateX(-50%); z-index:2; width:26px; height:42px; border:2px solid rgba(245,243,250,.4); border-radius:14px; display:flex; justify-content:center; padding-top:8px; }
 .scroll-cue span{ width:4px; height:8px; border-radius:2px; background:var(--ink); animation:cue 1.8s infinite; }
