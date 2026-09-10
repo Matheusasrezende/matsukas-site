@@ -359,6 +359,10 @@ svg{ display:block; }
 a.contact-row:hover{ color:var(--cyan); gap:20px; }
 .contact-row svg{ color:var(--cyan); flex-shrink:0; }
 
+.material-links{ display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+.material-btn{ gap:8px; }
+.material-btn svg{ flex-shrink:0; }
+
 .whatsapp-card{
   display:block; text-align:center; padding:40px 34px; border-radius:22px; text-decoration:none;
   background:var(--panel); border:1px solid var(--card-b); transition:transform .3s ease, border-color .3s ease;
