@@ -68,27 +68,68 @@
   <div class="hero-shade"></div>
 
   <div class="container hero-content">
-    <p class="hero-kicker reveal"><span class="dot"></span><span>DJ Open Format<span class="k-long"> &middot; Minas Gerais &rarr; Brasil</span></span></p>
-    <h1 class="hero-title reveal">
-      <span class="sr-only">DJ Matsukas</span>
-      <img src="assets/img/logo-word-white.png" alt="" class="hero-word" width="900" height="190">
-    </h1>
-    <p class="hero-lead reveal">Sets montados ao vivo, lendo a pista em tempo real &mdash; do aquecimento ao pico da noite.</p>
-    <div class="hero-ctas reveal">
-      <a href="https://wa.me/5534999838861?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20pedir%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener" class="btn btn-accent btn-lg">Peça seu orçamento</a>
-      <a href="#video" class="btn btn-line btn-lg">
-        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-        Assistir à gravação do show
-      </a>
+    <div class="hero-main">
+      <p class="hero-kicker reveal"><span class="dot"></span><span>DJ Open Format<span class="k-long"> &middot; Minas Gerais &rarr; Brasil</span></span></p>
+      <h1 class="hero-title reveal">
+        <span class="sr-only">DJ Matsukas</span>
+        <img src="assets/img/logo-word-white.png" alt="" class="hero-word" width="900" height="190">
+      </h1>
+      <p class="hero-lead reveal">O DJ que mantém a pista cheia do primeiro ao último minuto &mdash; repertório montado ao vivo pra <b>casamentos, formaturas, 15 anos e festas</b>.</p>
+
+      <p class="hero-proof reveal">Já abriu shows de <b>Murilo Huff</b> e <b>Hugo &amp; Guilherme</b> e dividiu line-up com <b>Alok</b> e <b>Gusttavo Lima</b>.</p>
+
+      <ul class="hero-perks reveal">
+        <li><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12l5 5 9-11"/></svg>Contrato digital</li>
+        <li><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12l5 5 9-11"/></svg>Show pirotécnico</li>
+        <li><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12l5 5 9-11"/></svg>Site do casamento</li>
+      </ul>
+
+      <div class="hero-ctas reveal">
+        <a href="#orcamento-rapido" class="btn btn-accent btn-lg hero-cta-main">Peça seu orçamento</a>
+        <a href="#video" class="btn btn-line btn-lg">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          Assistir à gravação do show
+        </a>
+      </div>
     </div>
+
+    <form class="quote-card reveal" id="orcamento-rapido" novalidate>
+      <p class="quote-k"><span class="dot"></span>Orçamento rápido</p>
+      <h2 class="quote-t">Consulte sua data</h2>
+      <p class="quote-s">Preencha e já chega tudo pronto no WhatsApp do Matsukas.</p>
+
+      <label class="q-field"><span>Tipo de evento</span>
+        <select name="tipo" required>
+          <option value="" disabled selected>Escolha</option>
+          <option>Casamento</option><option>15 anos</option><option>Aniversário</option><option>Formatura</option>
+          <option>Festa universitária</option><option>Evento corporativo</option><option>Bar / balada</option><option>Outro</option>
+        </select>
+      </label>
+      <div class="q-row">
+        <label class="q-field"><span>Data</span><input name="data" type="date" required></label>
+        <label class="q-field"><span>Convidados</span>
+          <select name="convidados">
+            <option value="">Opcional</option><option>Até 100</option><option>100 a 200</option><option>200 a 400</option><option>Mais de 400</option>
+          </select>
+        </label>
+      </div>
+      <label class="q-field"><span>Cidade</span><input name="cidade" type="text" maxlength="50" placeholder="Ex.: Patrocínio/MG"></label>
+
+      <p class="q-msg" id="q-msg" role="status"></p>
+      <button type="submit" class="btn btn-accent btn-lg q-submit">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5A10 10 0 1 0 12 2Z"/></svg>
+        Consultar no WhatsApp
+      </button>
+      <p class="q-foot">Resposta direto com o Matsukas &middot; sem compromisso</p>
+    </form>
   </div>
 
   <div class="hero-facts">
     <div class="container hero-facts-inner">
       <div class="fact"><span class="fact-n">4</span><span class="fact-l">anos de<br>estrada</span></div>
-      <div class="fact"><span class="fact-n">4</span><span class="fact-l">gêneros<br>no set</span></div>
+      <div class="fact"><span class="fact-n">16+</span><span class="fact-l">grandes nomes<br>no palco</span></div>
       <div class="fact"><span class="fact-n">BR</span><span class="fact-l">atende<br>todo o país</span></div>
-      <div class="fact fact-genres">Funk &middot; Funk Melody &middot; Funk Pop &middot; Eletrônico</div>
+      <div class="fact fact-genres" id="hero-quote">Funk &middot; Funk Melody &middot; Funk Pop &middot; Eletrônico</div>
     </div>
   </div>
 </section>
@@ -483,5 +524,6 @@
 
 <script src="assets/js/script.js"></script>
 <script src="assets/js/depoimentos.js"></script>
+<script src="assets/js/orcamento.js"></script>
 </body>
 </html>

@@ -48,6 +48,15 @@
       grid.appendChild(more);
     }
     if (empty) empty.classList.add("hide");
+
+    // depoimento mais recente vira prova social no topo do site
+    var hq = document.getElementById("hero-quote");
+    if (hq && list[0]) {
+      var t = String(list[0].texto).replace(/\s+/g, " ").trim();
+      if (t.length > 120) t = t.slice(0, 117).replace(/\s+\S*$/, "") + "...";
+      hq.className = "fact fact-quote";
+      hq.innerHTML = "<i>&ldquo;</i>" + esc(t) + "<small>" + esc(list[0].nome) + " &middot; " + esc(list[0].tipo) + "</small>";
+    }
   }
 
   if (configured) {
