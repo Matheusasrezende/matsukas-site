@@ -383,7 +383,16 @@
       <button type="button" class="btn btn-line btn-sm reveal" data-open-feedback>Deixar meu depoimento</button>
     </div>
 
-    <div class="dep-grid" id="dep-grid" aria-live="polite"></div>
+    <div class="dep-carousel" id="dep-carousel" hidden>
+      <div class="dep-grid" id="dep-grid" aria-live="polite" tabindex="0" aria-label="Depoimentos — role para o lado"></div>
+      <div class="dep-nav">
+        <div class="dep-progress"><span class="dep-count" id="dep-count">01 / 01</span><span class="dep-bar"><i id="dep-bar"></i></span></div>
+        <div class="dep-arrows">
+          <button type="button" class="dep-arrow" id="dep-prev" aria-label="Depoimento anterior"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button type="button" class="dep-arrow" id="dep-next" aria-label="Próximo depoimento"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+    </div>
 
     <div class="dep-empty reveal" id="dep-empty">
       <p class="dep-empty-t">Já curtiu uma festa com o Matsukas?</p>

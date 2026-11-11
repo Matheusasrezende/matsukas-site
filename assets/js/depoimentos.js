@@ -18,7 +18,6 @@
   var msg = document.getElementById("fb-msg");
   var count = document.getElementById("fb-count");
   var formHTML = form ? form.innerHTML : "";
-  var VISIBLE = 6;
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (m) {
@@ -26,29 +25,20 @@
     });
   }
 
-  /* ---------- render list ---------- */
+  /* ---------- render list (carrossel) ---------- */
   function render(list) {
     if (!list || !list.length) return;
-    grid.innerHTML = list.map(function (d, i) {
-      return '<figure class="dep"' + (i >= VISIBLE ? " hidden" : "") + ">" +
+    grid.innerHTML = list.map(function (d) {
+      return '<figure class="dep">' +
         '<blockquote class="dep-text">' + esc(d.texto) + "</blockquote>" +
+        '<button type="button" class="dep-more-btn" hidden>Ler mais</button>' +
         '<figcaption class="dep-who"><b>' + esc(d.nome) + "</b><span>" + esc(d.tipo) + (d.cidade ? " &middot; " + esc(d.cidade) : (d.data ? " &middot; " + esc(d.data) : "")) + "</span></figcaption>" +
         "</figure>";
     }).join("");
-
-    if (list.length > VISIBLE) {
-      var more = document.createElement("button");
-      more.type = "button";
-      more.className = "btn btn-line btn-sm dep-more";
-      more.textContent = "Ver mais depoimentos";
-      more.addEventListener("click", function () {
-        grid.querySelectorAll(".dep[hidden]").forEach(function (el) { el.hidden = false; });
-        more.remove();
-      });
-      grid.appendChild(more);
-    }
+    var wrap = document.getElementById("dep-carousel");
+    if (wrap) wrap.hidden = false;
     if (empty) empty.classList.add("hide");
-
+    setupCarousel();
     // depoimento mais recente vira prova social no topo do site
     var hq = document.getElementById("hero-quote");
     if (hq && list[0]) {
@@ -57,6 +47,64 @@
       hq.className = "fact fact-quote";
       hq.innerHTML = "<i>&ldquo;</i>" + esc(t) + "<small>" + esc(list[0].nome) + " &middot; " + esc(list[0].tipo) + "</small>";
     }
+  }
+
+  /* ---------- carrossel: setas, contador, barra, "ler mais" ---------- */
+  function setupCarousel() {
+    var cards = grid.querySelectorAll(".dep");
+    var prev = document.getElementById("dep-prev"), next = document.getElementById("dep-next");
+    var count = document.getElementById("dep-count"), bar = document.getElementById("dep-bar");
+    var nav = grid.parentNode.querySelector(".dep-nav");
+    var pad = function (n) { return (n < 10 ? "0" : "") + n; };
+
+    function perView() {
+      var w = cards[0] ? cards[0].getBoundingClientRect().width : 1;
+      return Math.max(1, Math.round((grid.clientWidth + 10) / (w + 10)));
+    }
+    function update() {
+      var total = cards.length, pv = Math.min(perView(), total);
+      var step = cards[0].getBoundingClientRect().width + 10;
+      var first = Math.round(grid.scrollLeft / step);
+      var max = Math.max(0, total - pv);
+      first = Math.min(first, max);
+      var last = Math.min(total, first + pv);
+      if (count) count.textContent = (pv > 1 ? pad(first + 1) + "–" + pad(last) : pad(first + 1)) + " / " + pad(total);
+      if (bar) { bar.style.width = (pv / total * 100) + "%"; bar.style.left = (first / total * 100) + "%"; }
+      if (prev) prev.disabled = first <= 0;
+      if (next) next.disabled = first >= max;
+      if (nav) nav.classList.toggle("single", total <= pv);
+    }
+    function go(dir) {
+      var step = cards[0].getBoundingClientRect().width + 10;
+      grid.scrollBy({ left: dir * step * Math.max(1, perView() - (perView() > 1 ? 1 : 0)), behavior: "smooth" });
+    }
+    if (prev) prev.onclick = function () { go(-1); };
+    if (next) next.onclick = function () { go(1); };
+    grid.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { e.preventDefault(); go(1); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); go(-1); }
+    });
+    var t;
+    grid.addEventListener("scroll", function () { clearTimeout(t); t = setTimeout(update, 60); }, { passive: true });
+    window.addEventListener("resize", function () { checkClamp(); update(); });
+
+    // "Ler mais" só aparece quando o texto foi cortado
+    function checkClamp() {
+      cards.forEach(function (c) {
+        var txt = c.querySelector(".dep-text"), btn = c.querySelector(".dep-more-btn");
+        if (c.classList.contains("open")) return;
+        btn.hidden = txt.scrollHeight <= txt.clientHeight + 2;
+      });
+    }
+    cards.forEach(function (c) {
+      var btn = c.querySelector(".dep-more-btn");
+      btn.addEventListener("click", function () {
+        var open = c.classList.toggle("open");
+        btn.textContent = open ? "Ler menos" : "Ler mais";
+      });
+    });
+    checkClamp();
+    update();
   }
 
   if (configured) {
