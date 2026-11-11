@@ -107,14 +107,15 @@
       </label>
       <div class="q-row">
         <label class="q-field"><span>Data</span><input name="data" type="date" required></label>
-        <label class="q-field"><span>Convidados</span>
-          <select name="convidados">
-            <option value="">Opcional</option><option>Até 100</option><option>100 a 200</option><option>200 a 400</option><option>Mais de 400</option>
-          </select>
+        <label class="q-field"><span>Convidados</span><input name="convidados" type="text" inputmode="numeric" maxlength="5" placeholder="Ex.: 150" autocomplete="off"></label>
+      </div>
+      <div class="q-row q-row-local">
+        <label class="q-field"><span>Estado</span><select name="uf"><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option selected>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select></label>
+        <label class="q-field"><span>Cidade <em id="q-city-status"></em></span>
+          <input name="cidade" type="text" list="q-cidades" maxlength="50" placeholder="Digite e escolha" autocomplete="off">
+          <datalist id="q-cidades"></datalist>
         </label>
       </div>
-      <label class="q-field"><span>Cidade</span><input name="cidade" type="text" maxlength="50" placeholder="Ex.: Patrocínio/MG"></label>
-
       <p class="q-msg" id="q-msg" role="status"></p>
       <button type="submit" class="btn btn-accent btn-lg q-submit">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5A10 10 0 1 0 12 2Z"/></svg>
