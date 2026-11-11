@@ -105,7 +105,7 @@ svg{ display:block; flex-shrink:0; }
 
 .brand{ display:inline-flex; align-items:center; gap:14px; justify-self:start; }
 .brand-emblem{ height:34px; width:auto; }
-.brand-word{ height:19px; width:auto; }
+.brand-word{ height:24px; width:auto; }
 
 .main-nav{ display:flex; gap:36px; }
 .nav-link{
@@ -144,8 +144,7 @@ svg{ display:block; flex-shrink:0; }
 }
 @media (max-width:480px){
   .header-cta{ display:none; }
-  .brand-emblem{ height:30px; }
-  .brand-word{ height:15px; }
+  .brand-word{ height:20px; }
 }
 
 /* ==========================================================================
