@@ -51,6 +51,7 @@
       <a href="#galeria" class="nav-link">Galeria</a>
       <a href="#video" class="nav-link">Vídeo</a>
       <a href="#instagram" class="nav-link">Instagram</a>
+      <a href="#depoimentos" class="nav-link">Depoimentos</a>
       <a href="#contato" class="nav-link">Contato</a>
       <a href="https://wa.me/5534999838861?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20pedir%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener" class="btn btn-accent btn-lg mobile-cta">Peça seu orçamento</a>
     </nav>
@@ -329,11 +330,67 @@
   </div>
 </section>
 
+<!-- ============ DEPOIMENTOS ============ -->
+<section id="depoimentos" class="section depoimentos" data-api="https://script.google.com/macros/s/AKfycbwxGWB75hKuhPrlJ5nOFLvBcj_onn4Zn9YAUGnNM-2pnQ-IO3bSVh5GO5yJqvmmYX706w/exec">
+  <div class="container">
+    <div class="sec-head sec-head-row">
+      <div>
+        <p class="label reveal">08 — Depoimentos</p>
+        <h2 class="h2 reveal">Quem já viveu a pista <em>conta</em>.</h2>
+      </div>
+      <button type="button" class="btn btn-line btn-sm reveal" data-open-feedback>Deixar meu depoimento</button>
+    </div>
+
+    <div class="dep-grid" id="dep-grid" aria-live="polite"></div>
+
+    <div class="dep-empty reveal" id="dep-empty">
+      <p class="dep-empty-t">Já curtiu uma festa com o Matsukas?</p>
+      <p class="dep-empty-s">Conta como foi &mdash; seu depoimento aparece aqui depois de aprovado.</p>
+      <button type="button" class="btn btn-accent btn-lg" data-open-feedback>Deixar meu depoimento</button>
+    </div>
+  </div>
+</section>
+
+<dialog id="feedback-dialog" class="fb-dialog" aria-labelledby="fb-title">
+  <form id="feedback-form" class="fb-form" novalidate>
+    <button type="button" class="fb-close" aria-label="Fechar" data-close-feedback>&times;</button>
+    <p class="label">Depoimento</p>
+    <h3 id="fb-title" class="fb-title">Como foi a sua festa?</h3>
+
+    <div class="fb-fields">
+      <label class="fb-field"><span>Seu nome</span>
+        <input name="nome" type="text" maxlength="60" autocomplete="name" required>
+      </label>
+      <label class="fb-field"><span>WhatsApp / telefone</span>
+        <input name="telefone" type="tel" maxlength="25" autocomplete="tel" placeholder="(34) 99999-9999" required>
+      </label>
+      <label class="fb-field fb-full"><span>Tipo de festa</span>
+        <select name="tipo_festa" required>
+          <option value="" disabled selected>Escolha</option>
+          <option>Casamento</option><option>Aniversário</option><option>15 anos</option><option>Formatura</option>
+          <option>Festa universitária</option><option>Evento corporativo</option><option>Bar / balada</option><option>Outro</option>
+        </select>
+      </label>
+      <label class="fb-field fb-full"><span>Seu depoimento <em id="fb-count">0/600</em></span>
+        <textarea name="depoimento" rows="5" maxlength="600" required placeholder="Conte como foi a festa, a pista, o repertório..."></textarea>
+      </label>
+      <input type="text" name="website" class="fb-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="fb-check fb-full">
+        <input type="checkbox" name="consentimento" value="sim" required>
+        <span>Autorizo publicar meu nome, o tipo de festa e este depoimento no site. Meu telefone <b>não</b> será publicado &mdash; serve só para contato.</span>
+      </label>
+    </div>
+
+    <p class="fb-msg" id="fb-msg" role="status"></p>
+    <button type="submit" class="btn btn-accent btn-lg fb-submit">Enviar depoimento</button>
+  </form>
+</dialog>
+
 <!-- ============ COMO FUNCIONA ============ -->
 <section id="processo" class="section processo">
   <div class="container">
     <div class="sec-head">
-      <p class="label reveal">08 — Como funciona</p>
+      <p class="label reveal">09 — Como funciona</p>
       <h2 class="h2 reveal">Do primeiro contato até a pista lotada.</h2>
     </div>
     <ol class="proc-grid">
@@ -350,7 +407,7 @@
   <div class="contato-bg" aria-hidden="true"><img src="assets/img/gal-4.jpg" alt="" loading="lazy"></div>
   <div class="container contato-grid">
     <div class="contato-main">
-      <p class="label reveal">09 — Contato</p>
+      <p class="label reveal">10 — Contato</p>
       <h2 class="cta-title reveal">Bora levar o <em>Matsukas</em> pro seu evento?</h2>
       <p class="lead reveal">Repertório sob medida pra sua pista, do primeiro ao último minuto da festa. Fale direto com o Matsukas &mdash; sem intermediário.</p>
       <div class="cta-actions reveal">
@@ -416,5 +473,6 @@
 </div>
 
 <script src="assets/js/script.js"></script>
+<script src="assets/js/depoimentos.js"></script>
 </body>
 </html>

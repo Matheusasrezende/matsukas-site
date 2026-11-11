@@ -380,6 +380,62 @@ svg{ display:block; flex-shrink:0; }
 }
 
 /* ==========================================================================
+   DEPOIMENTOS
+   ========================================================================== */
+.dep-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:10px; }
+.dep-grid:empty{ display:none; }
+.dep{ position:relative; display:flex; flex-direction:column; padding:84px 32px 28px; background:var(--bg-2); border:1px solid var(--line); }
+.dep::before{ content:'\201C'; position:absolute; top:18px; left:28px; font-size:96px; line-height:1; font-weight:800; color:var(--accent); opacity:.9; }
+.dep-text{ font-size:17px; line-height:1.65; color:var(--ink); white-space:pre-line; }
+.dep-who{ margin-top:auto; padding-top:26px; display:flex; flex-direction:column; gap:4px; }
+.dep-who b{ font-size:15px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; }
+.dep-who span{ font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+.dep-more{ grid-column:1 / -1; justify-self:center; margin-top:14px; }
+
+.dep-empty{ text-align:center; padding:72px 24px; border:1px dashed var(--line-2); }
+.dep-empty.hide{ display:none; }
+.dep-empty-t{ font-size:clamp(24px, 3vw, 36px); font-weight:800; font-stretch:78%; text-transform:uppercase; }
+.dep-empty-s{ color:var(--muted); margin:12px 0 30px; }
+
+.fb-dialog{ margin:auto; width:min(640px, calc(100% - 32px)); max-height:calc(100dvh - 32px); padding:0; border:1px solid var(--line-2); background:var(--bg-2); color:var(--ink); }
+.fb-dialog::backdrop{ background:rgba(5,5,6,.8); backdrop-filter:blur(4px); }
+.fb-form{ position:relative; padding:40px 36px 36px; }
+.fb-close{ position:absolute; top:12px; right:14px; width:44px; height:44px; font-size:32px; line-height:1; color:var(--muted); }
+.fb-close:hover{ color:var(--ink); }
+.fb-title{ font-size:clamp(28px, 4vw, 40px); font-weight:800; font-stretch:78%; text-transform:uppercase; line-height:1; margin-bottom:28px; }
+.fb-fields{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.fb-full{ grid-column:1 / -1; }
+.fb-field span{ display:flex; justify-content:space-between; font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
+.fb-field em{ font-style:normal; letter-spacing:0; }
+.fb-field input, .fb-field select, .fb-field textarea{
+  width:100%; font:inherit; font-size:16px; color:var(--ink); background:var(--bg); border:1px solid var(--line-2);
+  padding:14px 14px; border-radius:2px; outline:none; transition:border-color .2s ease;
+}
+.fb-field textarea{ resize:vertical; min-height:120px; line-height:1.5; }
+.fb-field select{ appearance:none; background-image:linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position:calc(100% - 20px) 50%, calc(100% - 15px) 50%; background-size:5px 5px; background-repeat:no-repeat; }
+.fb-field input:focus, .fb-field select:focus, .fb-field textarea:focus{ border-color:var(--accent); }
+.fb-field .invalid{ border-color:#e5484d; }
+.fb-hp{ position:absolute; left:-9999px; width:1px; height:1px; opacity:0; }
+.fb-check{ display:flex; gap:12px; align-items:flex-start; font-size:13px; line-height:1.5; color:var(--muted); cursor:pointer; }
+.fb-check input{ margin-top:3px; width:18px; height:18px; accent-color:var(--accent); flex-shrink:0; }
+.fb-check b{ color:var(--ink); }
+.fb-msg{ min-height:22px; margin:20px 0 14px; font-size:14px; }
+.fb-msg.err{ color:#ff8a80; }
+.fb-msg.ok{ color:#7ee2a8; }
+.fb-submit{ width:100%; }
+.fb-submit[disabled]{ opacity:.6; cursor:wait; }
+.fb-done{ text-align:center; padding:24px 0 8px; }
+.fb-done .fb-title{ margin-bottom:12px; }
+.fb-done p{ color:var(--muted); margin-bottom:28px; }
+
+@media (max-width:960px){ .dep-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width:640px){
+  .dep-grid{ grid-template-columns:1fr; }
+  .fb-form{ padding:36px 20px 24px; }
+  .fb-fields{ grid-template-columns:1fr; }
+}
+
+/* ==========================================================================
    PROCESSO
    ========================================================================== */
 .processo{ background:var(--bg-2); }
