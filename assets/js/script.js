@@ -4,10 +4,17 @@
   /* ---------- header scroll state + progress bar ---------- */
   var header = document.getElementById("site-header");
   var progressBar = document.getElementById("progress-bar");
+  var mobileNavEl = document.getElementById("mobile-nav");
+  var lastY = 0;
 
   function onScroll() {
     var y = window.scrollY || window.pageYOffset;
-    if (header) header.classList.toggle("scrolled", y > 40);
+    if (header) {
+      header.classList.toggle("scrolled", y > 40);
+      var menuOpen = mobileNavEl && mobileNavEl.classList.contains("open");
+      header.classList.toggle("hidden", !menuOpen && y > 400 && y > lastY);
+    }
+    lastY = y;
 
     var docHeight = document.documentElement.scrollHeight - window.innerHeight;
     var pct = docHeight > 0 ? (y / docHeight) * 100 : 0;
@@ -25,6 +32,8 @@
     navToggle.classList.remove("open");
     navToggle.setAttribute("aria-expanded", "false");
     mobileNav.classList.remove("open");
+    if (header) header.classList.remove("menu-open");
+    document.body.style.overflow = "";
   }
 
   if (navToggle && mobileNav) {
@@ -32,6 +41,8 @@
       var isOpen = navToggle.classList.toggle("open");
       navToggle.setAttribute("aria-expanded", String(isOpen));
       mobileNav.classList.toggle("open", isOpen);
+      if (header) header.classList.toggle("menu-open", isOpen);
+      document.body.style.overflow = isOpen ? "hidden" : "";
     });
     mobileNav.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", closeMobileNav);
@@ -78,7 +89,7 @@
       { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
     );
     revealEls.forEach(function (el, i) {
-      el.style.transitionDelay = Math.min(i % 6, 5) * 60 + "ms";
+      el.style.transitionDelay = Math.min(i % 4, 3) * 80 + "ms";
       reveal.observe(el);
     });
   } else {
@@ -161,6 +172,22 @@
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") closeLightbox();
   });
+
+  /* ---------- keyboard: Enter/Space on video facades ---------- */
+  document.querySelectorAll("#yt-facade, .insta-video-frame").forEach(function (el) {
+    el.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); el.click(); }
+    });
+  });
+
+  /* ---------- hide floating WhatsApp over the contact section ---------- */
+  var waFloat = document.querySelector(".wa-float");
+  var contato = document.getElementById("contato");
+  if (waFloat && contato && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      waFloat.classList.toggle("hide", entries[0].isIntersecting);
+    }, { threshold: 0.25 }).observe(contato);
+  }
 
   /* ---------- smooth scroll offset for fixed header ---------- */
   var headerEl = document.getElementById("site-header");

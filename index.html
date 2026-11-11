@@ -5,52 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DJ Matsukas — Open Format para Casamentos, Formaturas e Festas</title>
 <meta name="description" content="DJ Matsukas: sets de funk, funk melody, funk pop e eletrônico que leem a pista em tempo real. Contrate para casamentos, formaturas, festas universitárias, aniversários e eventos corporativos em todo o Brasil.">
+<meta name="theme-color" content="#0b0b0c">
 <meta property="og:title" content="DJ Matsukas — Open Format para o seu evento">
 <meta property="og:description" content="Sets que leem a pista em tempo real e conduzem a festa do aquecimento ao pico da noite. Peça seu orçamento.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/img/hero.jpg">
-<link rel="icon" type="image/png" href="assets/img/logo-black.png">
+<meta property="og:url" content="https://matsukasdj.com.br/">
+<meta property="og:image" content="https://matsukasdj.com.br/assets/img/hero.jpg">
+<link rel="icon" type="image/png" href="assets/img/logo-emblem-black.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" href="assets/img/logo-emblem-white.png" media="(prefers-color-scheme: dark)">
+<link rel="preload" href="assets/fonts/Archivo-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-<div id="progress-bar"></div>
-
 <!-- ============ HEADER ============ -->
 <header id="site-header">
-  <div class="header-inner container">
+  <div class="container header-inner">
     <a href="#home" class="brand" aria-label="Matsukas — início">
-      <img src="assets/img/logo-white.png" alt="" class="brand-logo">
-      <span class="brand-word">MATSUKAS</span>
+      <img src="assets/img/logo-emblem-white.png" alt="" class="brand-emblem" width="354" height="322">
+      <img src="assets/img/logo-word-white.png" alt="Matsukas" class="brand-word" width="900" height="190">
     </a>
 
-    <nav id="main-nav" class="main-nav">
+    <nav class="main-nav" aria-label="Principal">
       <a href="#sobre" class="nav-link">Sobre</a>
-      <a href="#diferenciais" class="nav-link">Diferenciais</a>
+      <a href="#trajetoria" class="nav-link">Trajetória</a>
       <a href="#galeria" class="nav-link">Galeria</a>
       <a href="#video" class="nav-link">Vídeo</a>
-      <a href="#instagram" class="nav-link">Instagram</a>
       <a href="#contato" class="nav-link">Contato</a>
     </nav>
 
     <div class="header-actions">
-      <a href="https://wa.me/5534999838861?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20pedir%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener" class="btn btn-grad btn-sm header-cta">Peça seu orçamento</a>
-      <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+      <a href="https://wa.me/5534999838861?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20pedir%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener" class="btn btn-accent btn-sm header-cta">Orçamento</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span>
       </button>
     </div>
   </div>
 
   <div id="mobile-nav" class="mobile-nav">
-    <a href="#sobre" class="nav-link">Sobre</a>
-    <a href="#diferenciais" class="nav-link">Diferenciais</a>
-    <a href="#eventos" class="nav-link">Tipos de evento</a>
-    <a href="#trajetoria" class="nav-link">Trajetória</a>
-    <a href="#galeria" class="nav-link">Galeria</a>
-    <a href="#video" class="nav-link">Vídeo</a>
-    <a href="#instagram" class="nav-link">Instagram</a>
-    <a href="#contato" class="nav-link">Contato</a>
-    <a href="https://wa.me/5534999838861?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20pedir%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener" class="btn btn-grad mobile-cta">Peça seu orçamento</a>
+    <nav class="container" aria-label="Menu">
+      <a href="#sobre" class="nav-link">Sobre</a>
+      <a href="#trajetoria" class="nav-link">Trajetória</a>
+      <a href="#diferenciais" class="nav-link">Diferenciais</a>
+      <a href="#galeria" class="nav-link">Galeria</a>
+      <a href="#video" class="nav-link">Vídeo</a>
+      <a href="#instagram" class="nav-link">Instagram</a>
+      <a href="#contato" class="nav-link">Contato</a>
+      <a href="https://wa.me/5534999838861?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20pedir%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener" class="btn btn-accent btn-lg mobile-cta">Peça seu orçamento</a>
+    </nav>
   </div>
 </header>
 
@@ -58,174 +60,123 @@
 
 <!-- ============ HERO ============ -->
 <section id="home" class="hero">
-  <img src="assets/img/hero.jpg" alt="DJ Matsukas tocando ao vivo, iluminação neon" class="hero-bg" fetchpriority="high">
-  <div class="hero-scrim"></div>
-  <div class="hero-scrim-side"></div>
+  <div class="hero-media">
+    <img src="assets/img/hero.jpg" alt="DJ Matsukas tocando ao vivo" fetchpriority="high">
+  </div>
+  <div class="hero-shade"></div>
 
-  <div class="hero-content">
-    <div class="container">
-      <div class="reveal eyebrow">DJ · Produtor de pista</div>
-      <h1 class="reveal display hero-title">MATSUKAS</h1>
-      <div class="reveal tag hero-genres">FUNK <span class="dim">·</span> FUNK MELODY <span class="dim">·</span> FUNK POP <span class="dim">·</span> ELETRÔNICO</div>
-      <p class="reveal hero-text">Sets que leem a pista em tempo real e conduzem a festa do aquecimento ao pico da noite — para quem quer a pista lotada do início ao fim.</p>
-      <div class="reveal hero-ctas">
-        <a href="https://wa.me/5534999838861?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20pedir%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener" class="btn btn-grad btn-lg">Peça seu orçamento</a>
-        <a href="#video" class="btn btn-ghost btn-lg">
-          <span class="play-dot"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          Assista ao audiovisual
-        </a>
-      </div>
+  <div class="container hero-content">
+    <p class="hero-kicker reveal"><span class="dot"></span>DJ Open Format<span class="k-long">&nbsp;&middot; Minas Gerais &rarr; Brasil</span></p>
+    <h1 class="hero-title reveal">
+      <span class="sr-only">DJ Matsukas</span>
+      <img src="assets/img/logo-word-white.png" alt="" class="hero-word" width="900" height="190">
+    </h1>
+    <p class="hero-lead reveal">Sets montados ao vivo, lendo a pista em tempo real &mdash; do aquecimento ao pico da noite.</p>
+    <div class="hero-ctas reveal">
+      <a href="https://wa.me/5534999838861?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20pedir%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener" class="btn btn-accent btn-lg">Peça seu orçamento</a>
+      <a href="#video" class="btn btn-line btn-lg">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        Assistir ao set
+      </a>
     </div>
   </div>
 
-  <div class="hero-foot">
-    <div class="container hero-foot-inner">
-      <span>MATHEUS AUGUSTO &middot; DJ MATSUKAS</span>
-      <span>Dispon&iacute;vel para eventos em todo o Brasil</span>
+  <div class="hero-facts">
+    <div class="container hero-facts-inner">
+      <div class="fact"><span class="fact-n">4</span><span class="fact-l">anos de<br>estrada</span></div>
+      <div class="fact"><span class="fact-n">4</span><span class="fact-l">gêneros<br>no set</span></div>
+      <div class="fact"><span class="fact-n">BR</span><span class="fact-l">atende<br>todo o país</span></div>
+      <div class="fact fact-genres">Funk &middot; Funk Melody &middot; Funk Pop &middot; Eletrônico</div>
     </div>
   </div>
-
-  <a href="#sobre" class="scroll-cue" aria-label="Rolar para baixo"><span></span></a>
 </section>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Casamentos</span><i>✦</i><span>Formaturas</span><i>✦</i><span>Festas universitárias</span><i>✦</i><span>Aniversários &amp; 15 anos</span><i>✦</i><span>Eventos corporativos</span><i>✦</i><span>Bares &amp; casas noturnas</span><i>✦</i>
+    <span>Casamentos</span><i>✦</i><span>Formaturas</span><i>✦</i><span>Festas universitárias</span><i>✦</i><span>Aniversários &amp; 15 anos</span><i>✦</i><span>Eventos corporativos</span><i>✦</i><span>Bares &amp; casas noturnas</span><i>✦</i>
+  </div>
+</div>
 
 <!-- ============ SOBRE ============ -->
 <section id="sobre" class="section sobre">
-  <div class="blob blob-magenta"></div>
-  <div class="blob blob-cyan"></div>
   <div class="container sobre-grid">
+    <div class="sobre-media reveal">
+      <img src="assets/img/sobre-1.jpg" alt="DJ Matsukas na cabine" loading="lazy" class="sobre-main">
+      <img src="assets/img/sobre-2.jpg" alt="DJ Matsukas interagindo com o público" loading="lazy" class="sobre-inset">
+    </div>
     <div class="sobre-text">
-      <div class="reveal eyebrow">Sobre</div>
-      <h2 class="reveal display section-title">O Matheus que virou <span class="grad-text">Matsukas</span></h2>
-      <p class="reveal body-text">DJ Matsukas &eacute; o nome art&iacute;stico que j&aacute; virou quase o nome real de Matheus. Em pouco mais de
-        <b>4 anos de carreira</b>, vem ganhando espa&ccedil;o na cena musical com um estilo pr&oacute;prio &mdash; uma fus&atilde;o de
-        <b>funk, funk melody, funk pop e eletr&ocirc;nico</b> &mdash; constru&iacute;da em cima de uma habilidade rara aos 24 anos: a leitura precisa de pista.</p>
-      <p class="reveal body-text">Cada set &eacute; montado ao vivo, n&atilde;o tocado no autom&aacute;tico: ele sente o p&uacute;blico, ajusta o
-        repert&oacute;rio em tempo real e conduz a pista do aquecimento at&eacute; o auge da festa.</p>
-      <div class="reveal stat-row">
-        <div class="stat-card"><div class="stat-val grad-text">24</div><div class="stat-label">Anos</div></div>
-        <div class="stat-card"><div class="stat-val grad-text">4</div><div class="stat-label">Anos de estrada</div></div>
-        <div class="stat-card"><div class="stat-val grad-text small">Funk &rarr; Eletr&ocirc;nico</div><div class="stat-label">Repert&oacute;rio</div></div>
-      </div>
-    </div>
-    <div class="reveal sobre-photos">
-      <img src="assets/img/sobre-1.jpg" alt="DJ Matsukas em cabine neon" class="ph-tall" loading="lazy">
-      <div class="ph-stack">
-        <img src="assets/img/sobre-2.jpg" alt="DJ Matsukas interagindo com o público" loading="lazy">
-        <img src="assets/img/sobre-3.jpg" alt="Vista aérea da pista lotada" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ DIFERENCIAIS ============ -->
-<section id="diferenciais" class="section diferenciais">
-  <div class="container">
-    <div class="reveal eyebrow">Por que chamar</div>
-    <h2 class="reveal display section-title">O que o Matsukas<br>entrega pro seu evento</h2>
-    <div class="dif-grid">
-
-      <div class="reveal card dif-card">
-        <div class="icon-badge">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 3a5 5 0 0 0-5 5v4a5 5 0 0 0 10 0V8a5 5 0 0 0-5-5Z"/><path d="M7 12v1a5 5 0 0 0 10 0v-1"/><path d="M12 18v3M9 21h6"/></svg>
-        </div>
-        <div class="tag dif-title">Leitura de pista</div>
-        <p class="dif-desc">Repertório construído ao vivo, lendo a energia do público em tempo real — nada de setlist engessado.</p>
-      </div>
-
-      <div class="reveal card dif-card">
-        <div class="icon-badge">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.8"><path d="M4 15V9l6-2v10M14 17V7l6-2v12"/><circle cx="6" cy="17" r="2"/><circle cx="16" cy="19" r="2"/></svg>
-        </div>
-        <div class="tag dif-title">Multi-gênero</div>
-        <p class="dif-desc">Funk, funk melody, funk pop e eletrônico em uma única apresentação: do aquecimento à pista lotada.</p>
-      </div>
-
-      <div class="reveal card dif-card">
-        <div class="icon-badge">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 2.5 14.7 8.9 21.5 9.6 16.4 14.1 17.9 21 12 17.4 6.1 21 7.6 14.1 2.5 9.6 9.3 8.9Z"/></svg>
-        </div>
-        <div class="tag dif-title">Palco confirmado</div>
-        <p class="dif-desc">Já dividiu line-up com nomes grandes da música nacional e MCs da cena do funk.</p>
-      </div>
-
-      <div class="reveal card dif-card">
-        <div class="icon-badge">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
-        </div>
-        <div class="tag dif-title">Versatilidade de formato</div>
-        <p class="dif-desc">De casamentos e aniversários de 15 anos a festas universitárias, festivais e formaturas — o show se adapta ao público e ao espaço.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============ TIPOS DE EVENTO ============ -->
-<section id="eventos" class="section eventos">
-  <div class="container">
-    <div class="reveal eyebrow">Onde o Matsukas toca</div>
-    <h2 class="reveal display section-title">Um som pra cada<br>tipo de <span class="grad-text">celebração</span></h2>
-    <div class="reveal evt-grid">
-      <div class="evt-chip">Casamentos</div>
-      <div class="evt-chip">Formaturas</div>
-      <div class="evt-chip">Festas universitárias</div>
-      <div class="evt-chip">Aniversários e 15 anos</div>
-      <div class="evt-chip">Eventos corporativos</div>
-      <div class="evt-chip">Bares e casas noturnas</div>
+      <p class="label reveal">01 — Sobre</p>
+      <h2 class="h2 reveal">O Matheus que virou <em>Matsukas</em>.</h2>
+      <p class="lead reveal">DJ Matsukas é o nome artístico que já virou quase o nome real de Matheus. Em 4 anos de carreira, construiu um estilo próprio: uma fusão de <b>funk, funk melody, funk pop e eletrônico</b>.</p>
+      <p class="body reveal">O diferencial é uma habilidade rara aos 24 anos — a leitura precisa de pista. Cada set é montado ao vivo, não tocado no automático: ele sente o público, ajusta o repertório em tempo real e conduz a festa até o auge.</p>
+      <dl class="stats reveal">
+        <div><dt>Idade</dt><dd>24</dd></div>
+        <div><dt>Anos de estrada</dt><dd>4</dd></div>
+        <div><dt>Repertório</dt><dd class="dd-sm">Funk &rarr; Eletrônico</dd></div>
+      </dl>
     </div>
   </div>
 </section>
 
 <!-- ============ TRAJETÓRIA ============ -->
 <section id="trajetoria" class="section trajetoria">
-  <div class="blob blob-violet"></div>
   <div class="container">
-    <div class="reveal eyebrow">Trajetória</div>
-    <h2 class="reveal display section-title">Palcos que já sentiram<br>o <span class="grad-text">Matsukas</span></h2>
+    <div class="sec-head">
+      <p class="label reveal">02 — Trajetória</p>
+      <h2 class="h2 reveal">Palcos que já sentiram o <em>Matsukas</em>.</h2>
+    </div>
 
-    <div class="traj-grid traj-grid-3">
-      <div class="reveal traj-col">
-        <div class="traj-label">Já abriu o show de</div>
-        <ul class="check-list">
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Murilo Huff</li>
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Hugo &amp; Guilherme</li>
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Diego &amp; Arnaldo</li>
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Daniel Cantor</li>
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Amado Batista</li>
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>MCs da cena do funk</li>
+    <div class="credits">
+      <div class="credit-block reveal">
+        <h3 class="credit-h">Abriu o show de</h3>
+        <ul class="credit-list big">
+          <li>Murilo Huff</li><li>Hugo &amp; Guilherme</li><li>Diego &amp; Arnaldo</li><li>Daniel Cantor</li><li>Amado Batista</li><li class="muted">MCs da cena do funk</li>
         </ul>
       </div>
-      <div class="reveal traj-col">
-        <div class="traj-label">Já esteve no mesmo evento que</div>
-        <ul class="check-list">
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Gusttavo Lima</li>
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Nattan</li>
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>João Bosco &amp; Vinicius</li>
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Dubdogz</li>
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Alok</li>
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Ana Castela</li>
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Jorge &amp; Mateus</li>
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>E muito mais</li>
+      <div class="credit-block reveal">
+        <h3 class="credit-h">Mesmo line-up que</h3>
+        <ul class="credit-list big">
+          <li>Gusttavo Lima</li><li>Alok</li><li>Ana Castela</li><li>Jorge &amp; Mateus</li><li>Nattan</li><li>João Bosco &amp; Vinicius</li><li>Dubdogz</li><li class="muted">e muito mais</li>
         </ul>
       </div>
-      <div class="reveal traj-col">
-        <div class="traj-label">Já se apresentou em</div>
-        <ul class="check-list">
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Intercursos — Uberaba</li>
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Intermed — Juiz de Fora</li>
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Fenacafé — Patrocínio</li>
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Festa do Queijo — Cruzeiro da Fortaleza</li>
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Expomonte — Monte Carmelo</li>
-          <li><svg class="chk" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>E outros grandes eventos regionais</li>
+      <div class="credit-block reveal">
+        <h3 class="credit-h">Eventos</h3>
+        <ul class="credit-list venues">
+          <li><b>Intercursos</b><span>Uberaba</span></li>
+          <li><b>Intermed</b><span>Juiz de Fora</span></li>
+          <li><b>Fenacafé</b><span>Patrocínio</span></li>
+          <li><b>Festa do Queijo</b><span>Cruzeiro da Fortaleza</span></li>
+          <li><b>Expomonte</b><span>Monte Carmelo</span></li>
         </ul>
       </div>
     </div>
   </div>
 
-  <div class="marquee-wrap">
-    <div class="marquee-track">
+  <div class="strip" aria-hidden="true">
+    <div class="strip-track">
       <img src="assets/img/strip-1.jpg" alt="" loading="lazy"><img src="assets/img/strip-2.jpg" alt="" loading="lazy"><img src="assets/img/strip-3.jpg" alt="" loading="lazy"><img src="assets/img/strip-4.jpg" alt="" loading="lazy"><img src="assets/img/strip-5.jpg" alt="" loading="lazy"><img src="assets/img/strip-6.jpg" alt="" loading="lazy"><img src="assets/img/strip-7.jpg" alt="" loading="lazy"><img src="assets/img/strip-8.jpg" alt="" loading="lazy"><img src="assets/img/strip-9.jpg" alt="" loading="lazy"><img src="assets/img/strip-10.jpg" alt="" loading="lazy">
-      <img src="assets/img/strip-1.jpg" alt="" loading="lazy" aria-hidden="true"><img src="assets/img/strip-2.jpg" alt="" loading="lazy" aria-hidden="true"><img src="assets/img/strip-3.jpg" alt="" loading="lazy" aria-hidden="true"><img src="assets/img/strip-4.jpg" alt="" loading="lazy" aria-hidden="true"><img src="assets/img/strip-5.jpg" alt="" loading="lazy" aria-hidden="true"><img src="assets/img/strip-6.jpg" alt="" loading="lazy" aria-hidden="true"><img src="assets/img/strip-7.jpg" alt="" loading="lazy" aria-hidden="true"><img src="assets/img/strip-8.jpg" alt="" loading="lazy" aria-hidden="true"><img src="assets/img/strip-9.jpg" alt="" loading="lazy" aria-hidden="true"><img src="assets/img/strip-10.jpg" alt="" loading="lazy" aria-hidden="true">
+      <img src="assets/img/strip-1.jpg" alt="" loading="lazy"><img src="assets/img/strip-2.jpg" alt="" loading="lazy"><img src="assets/img/strip-3.jpg" alt="" loading="lazy"><img src="assets/img/strip-4.jpg" alt="" loading="lazy"><img src="assets/img/strip-5.jpg" alt="" loading="lazy"><img src="assets/img/strip-6.jpg" alt="" loading="lazy"><img src="assets/img/strip-7.jpg" alt="" loading="lazy"><img src="assets/img/strip-8.jpg" alt="" loading="lazy"><img src="assets/img/strip-9.jpg" alt="" loading="lazy"><img src="assets/img/strip-10.jpg" alt="" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIFERENCIAIS ============ -->
+<section id="diferenciais" class="section diferenciais">
+  <div class="container dif-grid">
+    <div class="dif-media reveal">
+      <img src="assets/img/diferenciais.jpg" alt="DJ Matsukas com os braços erguidos no palco" loading="lazy">
+    </div>
+    <div>
+      <p class="label reveal">03 — Diferenciais</p>
+      <h2 class="h2 reveal">O que o Matsukas entrega pro seu evento.</h2>
+      <ol class="dif-list">
+        <li class="reveal"><span class="n">01</span><div><h3>Leitura de pista</h3><p>Repertório construído ao vivo, lendo a energia do público em tempo real — nada de setlist engessado.</p></div></li>
+        <li class="reveal"><span class="n">02</span><div><h3>Multi-gênero</h3><p>Funk, funk melody, funk pop e eletrônico numa mesma apresentação: do aquecimento à pista lotada.</p></div></li>
+        <li class="reveal"><span class="n">03</span><div><h3>Palco confirmado</h3><p>Já dividiu line-up com grandes nomes da música nacional e MCs da cena do funk.</p></div></li>
+        <li class="reveal"><span class="n">04</span><div><h3>Versatilidade de formato</h3><p>De casamentos e 15 anos a festas universitárias, festivais e formaturas — o show se adapta ao público e ao espaço.</p></div></li>
+      </ol>
     </div>
   </div>
 </section>
@@ -233,20 +184,20 @@
 <!-- ============ GALERIA ============ -->
 <section id="galeria" class="section galeria">
   <div class="container">
-    <div class="gal-head">
+    <div class="sec-head sec-head-row">
       <div>
-        <div class="reveal eyebrow">Ao vivo</div>
-        <h2 class="reveal display section-title">A energia da pista</h2>
+        <p class="label reveal">04 — Ao vivo</p>
+        <h2 class="h2 reveal">A energia da pista.</h2>
       </div>
-      <div class="reveal pill">Galeria</div>
+      <p class="sec-note reveal">Clique nas fotos para ampliar</p>
     </div>
-    <div class="reveal gal-grid">
-      <img src="assets/img/gal-1.jpg" alt="DJ Matsukas na cabine com letreiro do nome" loading="lazy" class="gal-a">
-      <img src="assets/img/gal-2.jpg" alt="Fones de ouvido em close, luz azul" loading="lazy" class="gal-b">
-      <img src="assets/img/gal-3.jpg" alt="DJ Matsukas sob luz neon rosa" loading="lazy" class="gal-c">
-      <img src="assets/img/gal-4.jpg" alt="Público de braços erguidos" loading="lazy" class="gal-d">
-      <img src="assets/img/gal-5.jpg" alt="DJ Matsukas de perfil apontando para cima" loading="lazy" class="gal-e">
-      <img src="assets/img/gal-6.jpg" alt="Multidão curtindo o show" loading="lazy" class="gal-f">
+    <div class="gal-grid reveal">
+      <button class="gal-item g1"><img src="assets/img/gal-1.jpg" alt="DJ Matsukas na cabine com letreiro do nome" loading="lazy"></button>
+      <button class="gal-item g2"><img src="assets/img/gal-4.jpg" alt="Público de braços erguidos" loading="lazy"></button>
+      <button class="gal-item g3"><img src="assets/img/gal-3.jpg" alt="DJ Matsukas sob luz neon" loading="lazy"></button>
+      <button class="gal-item g4"><img src="assets/img/gal-2.jpg" alt="Fones de ouvido em close, luz azul" loading="lazy"></button>
+      <button class="gal-item g5"><img src="assets/img/gal-6.jpg" alt="Multidão curtindo o show" loading="lazy"></button>
+      <button class="gal-item g6"><img src="assets/img/gal-5.jpg" alt="DJ Matsukas de perfil apontando para cima" loading="lazy"></button>
     </div>
   </div>
 </section>
@@ -254,33 +205,29 @@
 <!-- ============ VÍDEO ============ -->
 <section id="video" class="section video-section">
   <div class="container">
-    <div class="reveal eyebrow">Conteúdo</div>
-    <h2 class="reveal display section-title">Assista ao<br>audiovisual completo</h2>
-
-    <div class="reveal video-frame" id="yt-facade" data-yt="wkOWjV2QCUg" data-start="91">
-      <img src="assets/img/video-cover.jpg" alt="Capa do audiovisual RESENHA DO TSUKAS #01" class="video-cover">
-      <div class="video-scrim"></div>
-      <button class="play-btn" aria-label="Reproduzir vídeo">
-        <svg viewBox="0 0 24 24" width="30" height="30" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
-      </button>
-      <div class="video-caption">
-        <div class="tag video-tag">RESENHA DO TSUKAS #01</div>
-        <div class="display video-title">SET AO VIVO — FUNK &amp; OPEN FORMAT</div>
+    <div class="sec-head sec-head-row">
+      <div>
+        <p class="label reveal">05 — Audiovisual</p>
+        <h2 class="h2 reveal">Resenha do Tsukas <em>#01</em></h2>
       </div>
+      <p class="sec-note reveal">Set ao vivo — funk &amp; open format</p>
     </div>
 
-    <div class="reveal extras-row">
-      <a href="https://soundcloud.com/matsukasdj/tracks" target="_blank" rel="noopener" class="extra-card">
-        <span class="extra-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="1.8"><path d="M2 15h1v3H2zM5 13h1v5H5zM8 11h1v7H8zM11 9h1v9h-1zM14 7a5 5 0 0 1 5 5 3 3 0 0 1 3 3 3 3 0 0 1-3 3H14z"/></svg></span>
-        <span><span class="extra-t">Sets completos</span><span class="extra-s">SoundCloud</span></span>
+    <div class="video-frame reveal" id="yt-facade" data-yt="wkOWjV2QCUg" data-start="91" role="button" tabindex="0" aria-label="Reproduzir vídeo RESENHA DO TSUKAS #01">
+      <img src="assets/img/video-cover.jpg" alt="Capa do audiovisual RESENHA DO TSUKAS #01" class="video-cover" loading="lazy">
+      <span class="video-shade"></span>
+      <span class="play-btn"><svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+    </div>
+
+    <div class="links-row reveal">
+      <a href="https://soundcloud.com/matsukasdj/tracks" target="_blank" rel="noopener" class="link-card">
+        <span class="lc-t">Sets completos</span><span class="lc-s">SoundCloud</span><span class="lc-arrow">↗</span>
       </a>
-      <a href="https://drive.google.com/drive/folders/1-4yqXvgHiDzOvxZy8cGF80CT3FMaTFwS?usp=drive_link" target="_blank" rel="noopener" class="extra-card">
-        <span class="extra-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z" fill="#fff" stroke="none"/></svg></span>
-        <span><span class="extra-t">Aftermovies</span><span class="extra-s">Mais vídeos completos</span></span>
+      <a href="https://drive.google.com/drive/folders/1-4yqXvgHiDzOvxZy8cGF80CT3FMaTFwS?usp=drive_link" target="_blank" rel="noopener" class="link-card">
+        <span class="lc-t">Aftermovies</span><span class="lc-s">Mais vídeos completos</span><span class="lc-arrow">↗</span>
       </a>
-      <a href="https://www.instagram.com/matsukasdj/" target="_blank" rel="noopener" class="extra-card">
-        <span class="extra-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg></span>
-        <span><span class="extra-t">Bastidores</span><span class="extra-s">@matsukasdj</span></span>
+      <a href="https://www.instagram.com/matsukasdj/" target="_blank" rel="noopener" class="link-card">
+        <span class="lc-t">Bastidores</span><span class="lc-s">@matsukasdj</span><span class="lc-arrow">↗</span>
       </a>
     </div>
   </div>
@@ -289,62 +236,39 @@
 <!-- ============ INSTAGRAM ============ -->
 <section id="instagram" class="section instagram-section">
   <div class="container">
-    <div class="insta-head">
+    <div class="sec-head sec-head-row">
       <div>
-        <div class="reveal eyebrow">Instagram</div>
-        <h2 class="reveal display section-title">Conheça o <span class="grad-text">Instagram</span></h2>
-        <p class="reveal body-text insta-sub">Bastidores, sets e a energia da pista — direto do feed.</p>
+        <p class="label reveal">06 — Instagram</p>
+        <h2 class="h2 reveal">Direto do feed.</h2>
       </div>
-      <a href="https://www.instagram.com/matsukasdj/" target="_blank" rel="noopener" class="reveal btn btn-ghost btn-sm insta-more-top">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg>
-        @matsukasdj
-      </a>
+      <a href="https://www.instagram.com/matsukasdj/" target="_blank" rel="noopener" class="btn btn-line btn-sm reveal">@matsukasdj ↗</a>
     </div>
 
     <div class="insta-grid">
-      <div class="reveal insta-card">
-        <div class="insta-video-frame" data-video="assets/video/insta-1.mp4">
+      <div class="insta-card reveal">
+        <div class="insta-video-frame" data-video="assets/video/insta-1.mp4" role="button" tabindex="0" aria-label="Reproduzir vídeo">
           <img src="assets/img/insta-1-poster.jpg" class="video-cover" alt="Vídeo do Instagram de DJ Matsukas" loading="lazy">
-          <span class="video-scrim"></span>
-          <span class="play-btn insta-play" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
-          </span>
+          <span class="video-shade"></span>
+          <span class="play-btn sm"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
         </div>
-        <a href="https://www.instagram.com/p/DbwJq0PMcto/" target="_blank" rel="noopener" class="insta-cta">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg>
-          Ver no Instagram
-        </a>
+        <a href="https://www.instagram.com/p/DbwJq0PMcto/" target="_blank" rel="noopener" class="insta-cta">Ver no Instagram ↗</a>
       </div>
-      <div class="reveal insta-card">
-        <div class="insta-video-frame" data-video="assets/video/insta-2.mp4">
+      <div class="insta-card reveal">
+        <div class="insta-video-frame" data-video="assets/video/insta-2.mp4" role="button" tabindex="0" aria-label="Reproduzir vídeo">
           <img src="assets/img/insta-2-poster.jpg" class="video-cover" alt="Vídeo do Instagram de DJ Matsukas" loading="lazy">
-          <span class="video-scrim"></span>
-          <span class="play-btn insta-play" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
-          </span>
+          <span class="video-shade"></span>
+          <span class="play-btn sm"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
         </div>
-        <a href="https://www.instagram.com/p/Db4B5jJhRTx/" target="_blank" rel="noopener" class="insta-cta">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg>
-          Ver no Instagram
-        </a>
+        <a href="https://www.instagram.com/p/Db4B5jJhRTx/" target="_blank" rel="noopener" class="insta-cta">Ver no Instagram ↗</a>
       </div>
-      <div class="reveal insta-card">
-        <div class="insta-video-frame" data-video="assets/video/insta-3.mp4">
+      <div class="insta-card reveal">
+        <div class="insta-video-frame" data-video="assets/video/insta-3.mp4" role="button" tabindex="0" aria-label="Reproduzir vídeo">
           <img src="assets/img/insta-3-poster.jpg" class="video-cover" alt="Vídeo do Instagram de DJ Matsukas" loading="lazy">
-          <span class="video-scrim"></span>
-          <span class="play-btn insta-play" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
-          </span>
+          <span class="video-shade"></span>
+          <span class="play-btn sm"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
         </div>
-        <a href="https://www.instagram.com/p/Db_qxE3puJy/" target="_blank" rel="noopener" class="insta-cta">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg>
-          Ver no Instagram
-        </a>
+        <a href="https://www.instagram.com/p/Db_qxE3puJy/" target="_blank" rel="noopener" class="insta-cta">Ver no Instagram ↗</a>
       </div>
-    </div>
-
-    <div class="reveal insta-more">
-      <a href="https://www.instagram.com/matsukasdj/" target="_blank" rel="noopener" class="btn btn-grad btn-lg">Ver mais no Instagram</a>
     </div>
   </div>
 </section>
@@ -352,93 +276,41 @@
 <!-- ============ COMO FUNCIONA ============ -->
 <section id="processo" class="section processo">
   <div class="container">
-    <div class="reveal eyebrow">Como funciona</div>
-    <h2 class="reveal display section-title">Do primeiro contato<br>até a pista lotada</h2>
-    <div class="proc-grid">
-      <div class="reveal proc-step">
-        <div class="proc-num">01</div>
-        <div class="tag proc-title">Contato</div>
-        <p class="proc-desc">Chame no WhatsApp e conte a data, o local e o tipo do seu evento.</p>
-      </div>
-      <div class="reveal proc-step">
-        <div class="proc-num">02</div>
-        <div class="tag proc-title">Orçamento</div>
-        <p class="proc-desc">Você recebe uma proposta sob medida — sem pacote engessado, sob consulta.</p>
-      </div>
-      <div class="reveal proc-step">
-        <div class="proc-num">03</div>
-        <div class="tag proc-title">Confirmação</div>
-        <p class="proc-desc">Alinhamos repertório, horários e detalhes técnicos antes da data.</p>
-      </div>
-      <div class="reveal proc-step">
-        <div class="proc-num">04</div>
-        <div class="tag proc-title">O show</div>
-        <p class="proc-desc">Matsukas comanda a pista do início ao fim, lendo o público em tempo real.</p>
-      </div>
+    <div class="sec-head">
+      <p class="label reveal">07 — Como funciona</p>
+      <h2 class="h2 reveal">Do primeiro contato até a pista lotada.</h2>
     </div>
+    <ol class="proc-grid">
+      <li class="reveal"><span class="n">01</span><h3>Contato</h3><p>Chame no WhatsApp e conte a data, o local e o tipo do seu evento.</p></li>
+      <li class="reveal"><span class="n">02</span><h3>Orçamento</h3><p>Você recebe uma proposta sob medida — sem pacote engessado.</p></li>
+      <li class="reveal"><span class="n">03</span><h3>Confirmação</h3><p>Alinhamos repertório, horários e detalhes técnicos antes da data.</p></li>
+      <li class="reveal"><span class="n">04</span><h3>O show</h3><p>Matsukas comanda a pista do início ao fim, lendo o público em tempo real.</p></li>
+    </ol>
   </div>
 </section>
 
 <!-- ============ CONTATO ============ -->
 <section id="contato" class="section contato">
-  <div class="blob blob-magenta"></div>
-  <div class="blob blob-cyan"></div>
-  <div class="container contato-grid">
-    <div class="reveal contato-text">
-      <div class="eyebrow">Vamos fechar a data</div>
-      <h2 class="display section-title">Bora levar o <span class="grad-text">Matsukas</span><br>pro seu evento?</h2>
-      <p class="body-text">Sets sob medida pra sua pista, do início ao fim da festa. Fale direto e receba seu orçamento.</p>
-
-      <div class="contact-list">
-        <a href="https://wa.me/5534999838861" target="_blank" rel="noopener" class="contact-row">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21l1.6-4.8A8 8 0 1 1 8.7 20L3 21Z"/><path d="M8.5 9.5c0 3 2.9 6 6 6 .8 0 1.5-.7 1.5-1.5 0-.2-.1-.4-.3-.5l-1.9-1c-.2-.1-.5-.1-.6.1l-.6.8c-1-.5-2-1.5-2.5-2.5l.8-.6c.2-.1.2-.4.1-.6l-1-1.9c-.1-.2-.3-.3-.5-.3C9.2 8 8.5 8.7 8.5 9.5Z"/></svg>
-          <span>(34) 99983-8861</span>
+  <div class="container">
+    <div class="cta-panel reveal">
+      <img src="assets/img/logo-emblem-white.png" alt="" class="cta-emblem" width="354" height="322">
+      <p class="label">Vamos fechar a data</p>
+      <h2 class="cta-title">Bora levar o Matsukas pro seu evento?</h2>
+      <p class="lead">Sets sob medida pra sua pista, do início ao fim da festa. Fale direto e receba seu orçamento.</p>
+      <div class="cta-actions">
+        <a href="https://wa.me/5534999838861?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20pedir%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener" class="btn btn-accent btn-xl">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm5.7 14.3c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.4 0 .6-.1.2-.1.3-.3.5s-.3.4-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1s.9-1 1.1-1.3c.2-.3.4-.3.7-.2s1.9.9 2.2 1.1c.3.2.5.3.6.4.1.2.1.9-.1 1.6Z"/></svg>
+          Chamar no WhatsApp
         </a>
-        <a href="mailto:hubcrm@hubdeejay.com.br" class="contact-row">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
-          <span>hubcrm@hubdeejay.com.br</span>
-        </a>
-        <div class="contact-row">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
-          <span>Dispon&iacute;vel para o seu evento &mdash; atende todo o Brasil</span>
-        </div>
+        <a href="https://drive.google.com/file/d/10DBGvK_7NS89kKH8vnGEmTqvGxPyegFL/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn-line btn-lg">Media Kit ↓</a>
+        <a href="https://drive.google.com/file/d/1sobC9qYrWg95EFtPgrQQrba4utQz_xrS/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn-line btn-lg">Rider Técnico ↓</a>
       </div>
-
-      <div class="material-links">
-        <a href="https://drive.google.com/file/d/10DBGvK_7NS89kKH8vnGEmTqvGxPyegFL/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn-ghost btn-sm material-btn">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
-          Media Kit
-        </a>
-        <a href="https://drive.google.com/file/d/1sobC9qYrWg95EFtPgrQQrba4utQz_xrS/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn-ghost btn-sm material-btn">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
-          Rider T&eacute;cnico
-        </a>
+      <div class="contact-meta">
+        <a href="https://wa.me/5534999838861" target="_blank" rel="noopener">(34) 99983-8861</a>
+        <a href="mailto:hubcrm@hubdeejay.com.br">hubcrm@hubdeejay.com.br</a>
+        <span>Atende todo o Brasil</span>
       </div>
     </div>
-
-    <a href="https://wa.me/5534999838861?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20pedir%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener" class="reveal whatsapp-card">
-      <div class="tag wa-title">CHAMA NO WHATSAPP</div>
-      <div class="wa-sub">Resposta rápida pra sua data</div>
-      <div class="wa-icon">
-        <svg viewBox="0 0 24 24" width="46" height="46" fill="#fff"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm5.7 14.3c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.4 0 .6-.1.2-.1.3-.3.5s-.3.4-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1s.9-1 1.1-1.3c.2-.3.4-.3.7-.2s1.9.9 2.2 1.1c.3.2.5.3.6.4.1.2.1.9-.1 1.6Z"/></svg>
-      </div>
-      <div class="wa-num">(34) 99983-8861</div>
-    </a>
-  </div>
-
-  <div class="reveal socials-row container">
-    <a href="https://www.instagram.com/matsukasdj/" target="_blank" rel="noopener" class="social-item">
-      <span class="social-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg></span>
-      <span class="social-lbl">Instagram</span><span class="social-h">@matsukasdj</span>
-    </a>
-    <a href="https://www.tiktok.com/@matsukasdj" target="_blank" rel="noopener" class="social-item">
-      <span class="social-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4v9.5a3.5 3.5 0 1 1-3-3.46"/><path d="M14 4c.3 2 1.8 3.6 4 4"/></svg></span>
-      <span class="social-lbl">TikTok</span><span class="social-h">@matsukasdj</span>
-    </a>
-    <a href="https://soundcloud.com/matsukasdj" target="_blank" rel="noopener" class="social-item">
-      <span class="social-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 15h1v3H2zM5 13h1v5H5zM8 11h1v7H8zM11 9h1v9h-1zM14 7a5 5 0 0 1 5 5 3 3 0 0 1 3 3 3 3 0 0 1-3 3H14z"/></svg></span>
-      <span class="social-lbl">SoundCloud</span><span class="social-h">matsukasdj</span>
-    </a>
   </div>
 </section>
 
@@ -447,21 +319,26 @@
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div class="brand">
-      <img src="assets/img/logo-white.png" alt="" class="brand-logo">
-      <span class="brand-word">MATSUKAS</span>
-    </div>
-    <span class="footer-copy">MATSUKAS &copy; 2026 &middot; Todos os direitos reservados</span>
+    <a href="#home" class="brand" aria-label="Voltar ao início">
+      <img src="assets/img/logo-emblem-white.png" alt="" class="brand-emblem" width="354" height="322">
+      <img src="assets/img/logo-word-white.png" alt="Matsukas" class="brand-word" width="900" height="190">
+    </a>
+    <nav class="footer-social" aria-label="Redes sociais">
+      <a href="https://www.instagram.com/matsukasdj/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@matsukasdj" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://soundcloud.com/matsukasdj" target="_blank" rel="noopener">SoundCloud</a>
+    </nav>
+    <span class="footer-copy">© 2026 Matsukas · Todos os direitos reservados</span>
   </div>
 </footer>
 
 <!-- ============ WHATSAPP FLOAT ============ -->
 <a href="https://wa.me/5534999838861?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20pedir%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener" class="wa-float" aria-label="Chamar no WhatsApp">
-  <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm5.7 14.3c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.4 0 .6-.1.2-.1.3-.3.5s-.3.4-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1s.9-1 1.1-1.3c.2-.3.4-.3.7-.2s1.9.9 2.2 1.1c.3.2.5.3.6.4.1.2.1.9-.1 1.6Z"/></svg>
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm5.7 14.3c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.4 0 .6-.1.2-.1.3-.3.5s-.3.4-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1s.9-1 1.1-1.3c.2-.3.4-.3.7-.2s1.9.9 2.2 1.1c.3.2.5.3.6.4.1.2.1.9-.1 1.6Z"/></svg>
 </a>
 
 <!-- ============ LIGHTBOX ============ -->
-<div id="lightbox" class="lightbox">
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
   <button class="lightbox-close" aria-label="Fechar">&times;</button>
   <img id="lightbox-img" src="" alt="">
 </div>
