@@ -270,6 +270,40 @@ svg{ display:block; flex-shrink:0; }
 @media (max-width:480px){ .dif-list li{ grid-template-columns:44px 1fr; } .dif-list h3{ font-size:22px; } }
 
 /* ==========================================================================
+   SERVIÇOS / EXPERIÊNCIA COMPLETA
+   ========================================================================== */
+.srv-head{ display:grid; grid-template-columns:7fr 5fr; gap:64px; align-items:end; margin-bottom:64px; }
+.srv-head .lead{ color:var(--muted); }
+.srv-grid{ display:grid; grid-template-columns:repeat(4, 1fr); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.srv{ display:flex; flex-direction:column; padding:36px 28px 36px 0; }
+.srv + .srv{ padding-left:28px; border-left:1px solid var(--line); }
+.srv-n{ font-size:13px; font-weight:600; letter-spacing:.1em; color:var(--accent); }
+.srv h3{ font-size:24px; font-weight:700; font-stretch:82%; text-transform:uppercase; line-height:1.05; margin:20px 0 14px; }
+.srv p{ font-size:15px; line-height:1.7; color:var(--muted); }
+.srv-link{ margin-top:auto; padding-top:22px; font-size:12px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--ink); transition:color .2s ease; }
+.srv-link:hover{ color:var(--accent); }
+
+.combo{ margin-top:40px; background:var(--accent); color:var(--accent-ink); padding:36px 40px; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap; }
+.combo-k{ font-size:12px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; margin-bottom:8px; }
+.combo-t{ font-size:clamp(22px, 2.6vw, 34px); font-weight:800; font-stretch:78%; text-transform:uppercase; line-height:1.02; max-width:24ch; }
+.btn-dark{ background:var(--accent-ink); color:var(--ink); }
+.btn-dark:hover{ background:var(--ink); color:var(--accent-ink); }
+
+@media (max-width:1000px){
+  .srv-head{ grid-template-columns:1fr; gap:28px; }
+  .srv-grid{ grid-template-columns:1fr 1fr; }
+  .srv:nth-child(3){ padding-left:0; border-left:0; }
+  .srv:nth-child(n+3){ border-top:1px solid var(--line); }
+}
+@media (max-width:600px){
+  .srv-grid{ grid-template-columns:1fr; }
+  .srv, .srv + .srv{ padding:30px 0; border-left:0; }
+  .srv + .srv{ border-top:1px solid var(--line); }
+  .combo{ padding:28px 22px; }
+  .combo .btn{ flex:1 1 100%; }
+}
+
+/* ==========================================================================
    GALERIA
    ========================================================================== */
 .galeria{ background:var(--bg-2); }
