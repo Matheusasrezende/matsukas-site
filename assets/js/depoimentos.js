@@ -32,7 +32,7 @@
     grid.innerHTML = list.map(function (d, i) {
       return '<figure class="dep"' + (i >= VISIBLE ? " hidden" : "") + ">" +
         '<blockquote class="dep-text">' + esc(d.texto) + "</blockquote>" +
-        '<figcaption class="dep-who"><b>' + esc(d.nome) + "</b><span>" + esc(d.tipo) + (d.data ? " &middot; " + esc(d.data) : "") + "</span></figcaption>" +
+        '<figcaption class="dep-who"><b>' + esc(d.nome) + "</b><span>" + esc(d.tipo) + (d.cidade ? " &middot; " + esc(d.cidade) : (d.data ? " &middot; " + esc(d.data) : "")) + "</span></figcaption>" +
         "</figure>";
     }).join("");
 
@@ -82,9 +82,59 @@
   if (location.hash === "#deixar-depoimento") setTimeout(openDialog, 400);
 
   /* ---------- form ---------- */
+  /* ---------- telefone: só números, formato (34) 99999-9999 ---------- */
+  function maskPhone(v) {
+    var d = String(v).replace(/\D/g, "").slice(0, 11);
+    if (!d) return "";
+    if (d.length <= 2) return "(" + d;
+    if (d.length <= 6) return "(" + d.slice(0, 2) + ") " + d.slice(2);
+    if (d.length <= 10) return "(" + d.slice(0, 2) + ") " + d.slice(2, 6) + "-" + d.slice(6);
+    return "(" + d.slice(0, 2) + ") " + d.slice(2, 7) + "-" + d.slice(7);
+  }
+
+  /* ---------- cidades do IBGE por estado ---------- */
+  var cityCache = {};
+  function norm(t) { return String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim(); }
+  function loadCities(uf) {
+    var dl = document.getElementById("fb-cidades");
+    var st = document.getElementById("fb-city-status");
+    if (!dl || !uf) return;
+    if (cityCache[uf]) { fill(cityCache[uf]); return; }
+    if (st) st.textContent = "carregando...";
+    fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados/" + uf + "/municipios?orderBy=nome")
+      .then(function (r) { return r.json(); })
+      .then(function (list) {
+        cityCache[uf] = list.map(function (m) { return m.nome; });
+        fill(cityCache[uf]);
+      })
+      .catch(function () { if (st) st.textContent = ""; });
+    function fill(names) {
+      dl.innerHTML = names.map(function (n) { return '<option value="' + esc(n) + '">'; }).join("");
+      if (st) st.textContent = names.length + " cidades";
+    }
+  }
+  function matchCity(uf, typed) {
+    var list = cityCache[uf];
+    if (!list) return typed.trim();             // lista não carregou: aceita o que foi digitado
+    var t = norm(typed);
+    for (var i = 0; i < list.length; i++) if (norm(list[i]) === t) return list[i];
+    return null;
+  }
+
   function bindForm() {
     msg = document.getElementById("fb-msg");
     count = document.getElementById("fb-count");
+    var tel = form.querySelector("input[name=telefone]");
+    if (tel) {
+      tel.addEventListener("input", function () { tel.value = maskPhone(tel.value); });
+      tel.addEventListener("keypress", function (e) { if (e.key.length === 1 && !/[0-9]/.test(e.key)) e.preventDefault(); });
+    }
+    var uf = form.querySelector("select[name=uf]");
+    var city = form.querySelector("input[name=cidade]");
+    if (uf) {
+      uf.addEventListener("change", function () { if (city) city.value = ""; loadCities(uf.value); });
+      loadCities(uf.value);
+    }
     var ta = form.querySelector("textarea[name=depoimento]");
     if (ta && count) {
       ta.addEventListener("input", function () { count.textContent = ta.value.length + "/600"; });
@@ -108,10 +158,18 @@
     if (f.nome.value.trim().length < 2) bad.push(f.nome);
     if (f.telefone.value.replace(/\D/g, "").length < 10) bad.push(f.telefone);
     if (!f.tipo_festa.value) bad.push(f.tipo_festa);
+    var cidadeOk = f.cidade.value.trim() ? matchCity(f.uf.value, f.cidade.value) : null;
+    if (!cidadeOk) bad.push(f.cidade);
     if (f.depoimento.value.trim().length < 10) bad.push(f.depoimento);
     bad.forEach(function (el) { el.classList.add("invalid"); });
 
-    if (bad.length) { setMsg("Preencha nome, telefone com DDD, tipo de festa e o depoimento.", "err"); bad[0].focus(); return; }
+    if (bad.length) {
+      setMsg(bad[0] === f.cidade && f.cidade.value.trim()
+        ? "Escolha a cidade na lista do estado selecionado."
+        : "Preencha nome, telefone com DDD, tipo de festa, cidade e o depoimento.", "err");
+      bad[0].focus(); return;
+    }
+    f.cidade.value = cidadeOk;
     if (!f.consentimento.checked) { setMsg("Marque a autorização para publicarmos seu depoimento.", "err"); return; }
     if (!configured) { setMsg("O envio de depoimentos ainda está sendo configurado. Tente novamente em breve.", "err"); return; }
 

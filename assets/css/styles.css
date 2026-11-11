@@ -405,6 +405,7 @@ svg{ display:block; flex-shrink:0; }
 .fb-title{ font-size:clamp(28px, 4vw, 40px); font-weight:800; font-stretch:78%; text-transform:uppercase; line-height:1; margin-bottom:28px; }
 .fb-fields{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
 .fb-full{ grid-column:1 / -1; }
+.fb-local{ display:grid; grid-template-columns:110px 1fr; gap:16px; }
 .fb-field span{ display:flex; justify-content:space-between; font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
 .fb-field em{ font-style:normal; letter-spacing:0; }
 .fb-field input, .fb-field select, .fb-field textarea{

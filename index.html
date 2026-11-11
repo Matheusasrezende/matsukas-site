@@ -362,7 +362,7 @@
         <input name="nome" type="text" maxlength="60" autocomplete="name" required>
       </label>
       <label class="fb-field"><span>WhatsApp / telefone</span>
-        <input name="telefone" type="tel" maxlength="25" autocomplete="tel" placeholder="(34) 99999-9999" required>
+        <input name="telefone" type="tel" inputmode="numeric" maxlength="15" autocomplete="tel-national" placeholder="(34) 99999-9999" required>
       </label>
       <label class="fb-field fb-full"><span>Tipo de festa</span>
         <select name="tipo_festa" required>
@@ -371,13 +371,22 @@
           <option>Festa universitária</option><option>Evento corporativo</option><option>Bar / balada</option><option>Outro</option>
         </select>
       </label>
+      <div class="fb-local fb-full">
+        <label class="fb-field"><span>Estado</span>
+          <select name="uf" required><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option selected>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select>
+        </label>
+        <label class="fb-field"><span>Cidade da festa <em id="fb-city-status"></em></span>
+          <input name="cidade" type="text" list="fb-cidades" maxlength="50" autocomplete="off" placeholder="Digite e escolha na lista" required>
+          <datalist id="fb-cidades"></datalist>
+        </label>
+      </div>
       <label class="fb-field fb-full"><span>Seu depoimento <em id="fb-count">0/600</em></span>
         <textarea name="depoimento" rows="5" maxlength="600" required placeholder="Conte como foi a festa, a pista, o repertório..."></textarea>
       </label>
       <input type="text" name="website" class="fb-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <label class="fb-check fb-full">
         <input type="checkbox" name="consentimento" value="sim" required>
-        <span>Autorizo publicar meu nome, o tipo de festa e este depoimento no site. Meu telefone <b>não</b> será publicado &mdash; serve só para contato.</span>
+        <span>Autorizo publicar meu nome, o tipo de festa, a cidade e este depoimento no site. Meu telefone <b>não</b> será publicado &mdash; serve só para contato.</span>
       </label>
     </div>
 
