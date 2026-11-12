@@ -16,7 +16,7 @@
 
   /* casamento, formatura, 15 anos e aniversário: pergunta se vai ter banda */
   var formato = document.getElementById("q-formato");
-  var COM_BANDA = ["Casamento", "Formatura", "15 anos", "Aniversário"];
+  var COM_BANDA = ["Casamento", "Formatura", "15 anos", "Aniversário", "Evento corporativo"];
   function syncFormato() { if (formato) formato.hidden = COM_BANDA.indexOf(form.elements.tipo.value) < 0; }
   form.elements.tipo.addEventListener("change", syncFormato);
   syncFormato();
