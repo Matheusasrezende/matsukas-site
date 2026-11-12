@@ -105,6 +105,13 @@
           <option>Festa universitária</option><option>Evento corporativo</option><option>Bar / balada</option><option>Outro</option>
         </select>
       </label>
+      <div class="q-field q-formato" id="q-formato" hidden>
+        <span>Atração musical</span>
+        <div class="q-seg" role="radiogroup" aria-label="Atração musical">
+          <label><input type="radio" name="formato" value="Somente DJ" checked><b>Somente DJ</b></label>
+          <label><input type="radio" name="formato" value="Vai ter banda + DJ"><b>Vai ter banda</b></label>
+        </div>
+      </div>
       <div class="q-row">
         <label class="q-field"><span>Data</span><input name="data" type="date" required></label>
         <label class="q-field"><span>Convidados</span><input name="convidados" type="text" inputmode="numeric" maxlength="5" placeholder="Ex.: 150" autocomplete="off"></label>
@@ -116,6 +123,9 @@
           <datalist id="q-cidades"></datalist>
         </label>
       </div>
+      <label class="q-field"><span>Conte sua ideia <em>opcional</em></span>
+        <textarea name="ideia" rows="2" maxlength="400" placeholder="Estilo da festa, músicas que não podem faltar, horário..."></textarea>
+      </label>
       <p class="q-msg" id="q-msg" role="status"></p>
       <button type="submit" class="btn btn-accent btn-lg q-submit">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5A10 10 0 1 0 12 2Z"/></svg>
@@ -480,7 +490,7 @@
         <a href="https://drive.google.com/file/d/10DBGvK_7NS89kKH8vnGEmTqvGxPyegFL/view?usp=drive_link" target="_blank" rel="noopener" class="doc-link">
           <span class="doc-ico">PDF</span><span><b>Media Kit</b><small>Apresentação completa</small></span><i>↓</i>
         </a>
-        <a href="https://drive.google.com/file/d/1sobC9qYrWg95EFtPgrQQrba4utQz_xrS/view?usp=drive_link" target="_blank" rel="noopener" class="doc-link">
+        <a href="assets/docs/matsukas-rider-tecnico-2026.pdf" target="_blank" rel="noopener" class="doc-link">
           <span class="doc-ico">PDF</span><span><b>Rider Técnico</b><small>Equipamentos e palco</small></span><i>↓</i>
         </a>
       </div>

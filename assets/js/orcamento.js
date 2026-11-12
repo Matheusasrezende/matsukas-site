@@ -14,6 +14,13 @@
   hoje.setMinutes(hoje.getMinutes() - hoje.getTimezoneOffset());
   if (data) data.min = hoje.toISOString().slice(0, 10);
 
+  /* casamento, formatura, 15 anos e aniversário: pergunta se vai ter banda */
+  var formato = document.getElementById("q-formato");
+  var COM_BANDA = ["Casamento", "Formatura", "15 anos", "Aniversário"];
+  function syncFormato() { if (formato) formato.hidden = COM_BANDA.indexOf(form.elements.tipo.value) < 0; }
+  form.elements.tipo.addEventListener("change", syncFormato);
+  syncFormato();
+
   /* convidados: só números (1 a 99999) */
   var conv = form.elements.convidados;
   conv.addEventListener("input", function () { conv.value = conv.value.replace(/\D/g, "").replace(/^0+/, "").slice(0, 5); });
@@ -80,6 +87,12 @@
     ];
     if (cidadeOk) linhas.push("Cidade: " + cidadeOk + "/" + uf.value);
     if (conv.value) linhas.push("Convidados: " + Number(conv.value).toLocaleString("pt-BR"));
+    if (formato && !formato.hidden) {
+      var fm = form.querySelector('input[name="formato"]:checked');
+      if (fm) linhas.push("Atração: " + fm.value);
+    }
+    var ideia = f.ideia.value.trim().replace(/\s+\n/g, "\n");
+    if (ideia) { linhas.push(""); linhas.push("Sobre a festa: " + ideia); }
     window.open("https://wa.me/" + WHATS + "?text=" + encodeURIComponent(linhas.join("\n")), "_blank", "noopener");
   });
 

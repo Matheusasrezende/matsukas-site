@@ -184,13 +184,21 @@ svg{ display:block; flex-shrink:0; }
 .q-field span em{ font-style:normal; float:right; letter-spacing:0; text-transform:none; color:var(--muted-2); }
 .q-field{ display:block; margin-bottom:12px; }
 .q-field span{ display:block; font-size:10.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; }
-.q-field input, .q-field select{
+.q-field input, .q-field select, .q-field textarea{
   width:100%; font:inherit; font-size:15px; color:var(--ink); background:rgba(11,11,12,.7); border:1px solid var(--line-2);
   padding:12px 12px; border-radius:2px; outline:none; color-scheme:dark; transition:border-color .2s ease;
 }
 .q-field select{ appearance:none; background-image:linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position:calc(100% - 18px) 52%, calc(100% - 13px) 52%; background-size:5px 5px; background-repeat:no-repeat; padding-right:30px; }
-.q-field input:focus, .q-field select:focus{ border-color:var(--accent); }
+.q-field textarea{ resize:none; line-height:1.4; font-size:14.5px; }
+.q-field input:focus, .q-field select:focus, .q-field textarea:focus{ border-color:var(--accent); }
 .q-field .invalid{ border-color:#e5484d; }
+.q-formato[hidden]{ display:none; }
+.q-seg{ display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+.q-seg label{ position:relative; cursor:pointer; }
+.q-seg input{ position:absolute; opacity:0; pointer-events:none; }
+.q-seg b{ display:block; text-align:center; padding:11px 8px; font-size:13px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); background:rgba(11,11,12,.7); border:1px solid var(--line-2); border-radius:2px; transition:all .2s ease; }
+.q-seg input:checked + b{ color:var(--accent-ink); background:var(--accent); border-color:var(--accent); }
+.q-seg input:focus-visible + b{ outline:2px solid var(--accent); outline-offset:2px; }
 .q-msg{ min-height:18px; font-size:13px; color:#ff8a80; margin:2px 0 8px; }
 .q-submit{ width:100%; }
 .q-foot{ margin-top:12px; text-align:center; font-size:12px; color:var(--muted-2); }
