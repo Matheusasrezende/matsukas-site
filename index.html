@@ -14,7 +14,7 @@
 <link rel="icon" type="image/png" href="assets/img/logo-emblem-black.png" media="(prefers-color-scheme: light)">
 <link rel="icon" type="image/png" href="assets/img/logo-emblem-white.png" media="(prefers-color-scheme: dark)">
 <link rel="preload" href="assets/fonts/Archivo-Variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/styles.css?v=20261112b">
+<link rel="stylesheet" href="assets/css/styles.css?v=20261112c">
 </head>
 <body>
 
@@ -348,12 +348,53 @@
     <div class="sec-head sec-head-row">
       <div>
         <p class="label reveal">07 — Instagram</p>
-        <h2 class="h2 reveal">Direto do feed.</h2>
+        <h2 class="h2 reveal insta-title">Melhores momentos da <em>Resenha do Tsukas.</em></h2>
       </div>
       <a href="https://www.instagram.com/matsukasdj/" target="_blank" rel="noopener" class="btn btn-line btn-sm reveal">@matsukasdj ↗</a>
     </div>
 
-    <div class="insta-grid">
+    <div class="insta-wrap">
+    <div class="insta-grid" id="insta-grid">
+      <div class="insta-card reveal">
+        <div class="insta-video-frame" data-video="assets/video/insta-4.mp4" role="button" tabindex="0" aria-label="Reproduzir vídeo">
+          <img src="assets/img/insta-4-poster.jpg" class="video-cover" alt="Vídeo do Instagram de DJ Matsukas" loading="lazy">
+          <span class="video-shade"></span>
+          <span class="play-btn sm"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        </div>
+        <a href="https://www.instagram.com/p/DYS7FqAOJED/" target="_blank" rel="noopener" class="insta-cta">Ver no Instagram ↗</a>
+      </div>
+      <div class="insta-card reveal">
+        <div class="insta-video-frame" data-video="assets/video/insta-5.mp4" role="button" tabindex="0" aria-label="Reproduzir vídeo">
+          <img src="assets/img/insta-5-poster.jpg" class="video-cover" alt="Vídeo do Instagram de DJ Matsukas" loading="lazy">
+          <span class="video-shade"></span>
+          <span class="play-btn sm"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        </div>
+        <a href="https://www.instagram.com/p/DIg2AYctRju/" target="_blank" rel="noopener" class="insta-cta">Ver no Instagram ↗</a>
+      </div>
+      <div class="insta-card reveal">
+        <div class="insta-video-frame" data-video="assets/video/insta-6.mp4" role="button" tabindex="0" aria-label="Reproduzir vídeo">
+          <img src="assets/img/insta-6-poster.jpg" class="video-cover" alt="Vídeo do Instagram de DJ Matsukas" loading="lazy">
+          <span class="video-shade"></span>
+          <span class="play-btn sm"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        </div>
+        <a href="https://www.instagram.com/p/DdkePlhBWyr/" target="_blank" rel="noopener" class="insta-cta">Ver no Instagram ↗</a>
+      </div>
+      <div class="insta-card reveal">
+        <div class="insta-video-frame" data-video="assets/video/insta-7.mp4" role="button" tabindex="0" aria-label="Reproduzir vídeo">
+          <img src="assets/img/insta-7-poster.jpg" class="video-cover" alt="Vídeo do Instagram de DJ Matsukas" loading="lazy">
+          <span class="video-shade"></span>
+          <span class="play-btn sm"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        </div>
+        <a href="https://www.instagram.com/p/DY0iPXTNUHV/" target="_blank" rel="noopener" class="insta-cta">Ver no Instagram ↗</a>
+      </div>
+      <div class="insta-card reveal">
+        <div class="insta-video-frame" data-video="assets/video/insta-8.mp4" role="button" tabindex="0" aria-label="Reproduzir vídeo">
+          <img src="assets/img/insta-8-poster.jpg" class="video-cover" alt="Vídeo do Instagram de DJ Matsukas" loading="lazy">
+          <span class="video-shade"></span>
+          <span class="play-btn sm"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        </div>
+        <a href="https://www.instagram.com/p/De-KE9Cuu99/" target="_blank" rel="noopener" class="insta-cta">Ver no Instagram ↗</a>
+      </div>
       <div class="insta-card reveal">
         <div class="insta-video-frame" data-video="assets/video/insta-1.mp4" role="button" tabindex="0" aria-label="Reproduzir vídeo">
           <img src="assets/img/insta-1-poster.jpg" class="video-cover" alt="Vídeo do Instagram de DJ Matsukas" loading="lazy">
@@ -378,6 +419,11 @@
         </div>
         <a href="https://www.instagram.com/p/Db_qxE3puJy/" target="_blank" rel="noopener" class="insta-cta">Ver no Instagram ↗</a>
       </div>
+    </div>
+    <div class="insta-nav">
+      <button type="button" class="dep-arrow insta-arrow" data-dir="-1" aria-label="Vídeos anteriores">←</button>
+      <button type="button" class="dep-arrow insta-arrow" data-dir="1" aria-label="Próximos vídeos">→</button>
+    </div>
     </div>
   </div>
 </section>
@@ -542,8 +588,8 @@
   <img id="lightbox-img" src="" alt="">
 </div>
 
-<script src="assets/js/script.js?v=20261112b"></script>
-<script src="assets/js/depoimentos.js?v=20261112b"></script>
-<script src="assets/js/orcamento.js?v=20261112b"></script>
+<script src="assets/js/script.js?v=20261112c"></script>
+<script src="assets/js/depoimentos.js?v=20261112c"></script>
+<script src="assets/js/orcamento.js?v=20261112c"></script>
 </body>
 </html>

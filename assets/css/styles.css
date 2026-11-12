@@ -417,14 +417,17 @@ svg{ display:block; flex-shrink:0; }
 /* ==========================================================================
    INSTAGRAM
    ========================================================================== */
-.insta-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:10px; }
+.insta-grid{ display:grid; grid-auto-flow:column; grid-auto-columns:calc((100% - 20px) / 3); gap:10px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; scrollbar-width:none; }
+.insta-grid::-webkit-scrollbar{ display:none; }
+.insta-card{ scroll-snap-align:start; }
 .insta-video-frame{ aspect-ratio:9/16; }
 .insta-cta{ display:block; padding:16px 0; font-size:12px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); border-bottom:1px solid var(--line); transition:color .2s ease; }
 .insta-cta:hover, .insta-cta.pulse{ color:var(--accent); }
+.insta-title{ max-width:22ch; }
+.insta-nav{ display:flex; justify-content:flex-end; gap:8px; margin-top:24px; }
 @media (max-width:800px){
-  .insta-grid{ grid-auto-flow:column; grid-template-columns:none; grid-auto-columns:72%; overflow-x:auto; scroll-snap-type:x mandatory; margin:0 -20px; padding:0 20px; scrollbar-width:none; }
-  .insta-grid::-webkit-scrollbar{ display:none; }
-  .insta-card{ scroll-snap-align:start; }
+  .insta-grid{ grid-auto-columns:72%; margin:0 -20px; padding:0 20px; scroll-padding:0 20px; }
+  .insta-nav .dep-arrow{ width:44px; height:44px; }
 }
 
 /* ==========================================================================

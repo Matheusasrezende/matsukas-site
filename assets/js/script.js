@@ -204,3 +204,31 @@
     });
   });
 })();
+
+/* Carrossel do Instagram */
+(function(){
+  var grid=document.getElementById("insta-grid"); if(!grid) return;
+  var btns=document.querySelectorAll(".insta-arrow");
+  function step(){ var c=grid.querySelector(".insta-card"); return c ? c.getBoundingClientRect().width + 10 : grid.clientWidth; }
+  function update(){
+    var max=grid.scrollWidth - grid.clientWidth - 2;
+    btns.forEach(function(b){ b.disabled = b.getAttribute("data-dir")==="-1" ? grid.scrollLeft<=2 : grid.scrollLeft>=max; });
+  }
+  btns.forEach(function(b){ b.addEventListener("click", function(){
+    var cards=grid.querySelectorAll(".insta-card"); if(!cards.length) return;
+    var per = window.innerWidth > 800 ? 3 : 1;
+    var pos = function(i){ return cards[i].offsetLeft - cards[0].offsetLeft; };
+    var cur = 0;
+    for (var i=0;i<cards.length;i++){ if (pos(i) <= grid.scrollLeft + 5) cur = i; }
+    var next = Math.max(0, Math.min(cards.length-1, cur + per*parseInt(b.getAttribute("data-dir"),10)));
+    grid.scrollTo({ left: pos(next), behavior:"smooth" });
+  }); });
+  grid.addEventListener("scroll", function(){ window.requestAnimationFrame(update); }, { passive:true });
+  window.addEventListener("resize", update);
+  update();
+})();
+/* Só um vídeo do Instagram tocando por vez */
+document.addEventListener("play", function(e){
+  if (!e.target.closest || !e.target.closest(".insta-video-frame")) return;
+  document.querySelectorAll(".insta-video-frame video").forEach(function(v){ if (v !== e.target) v.pause(); });
+}, true);
