@@ -298,9 +298,11 @@ svg{ display:block; flex-shrink:0; }
 .credit-list.big li.muted{ color:var(--muted-2); border-bottom:0; }
 .credit-list.venues li{ display:flex; justify-content:space-between; align-items:center; gap:16px; padding:8px 0; border-bottom:1px solid var(--line); }
 .credit-list.venues b{ font-size:18px; font-weight:700; }
+.credit-list li, .credit-list li b, .credit-list li span{ transition:color .2s ease; }
+.credit-list.big li:hover, .credit-list.venues li:hover b, .credit-list.venues li:hover span{ color:var(--accent); }
 .credits-more{ margin-top:36px; display:flex; align-items:center; gap:20px; font-size:13px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); }
 .credits-more::before, .credits-more::after{ content:""; flex:1; height:1px; background:var(--line); }
-.credit-list.venues span{ font-size:13px; color:var(--muted); text-align:right; }
+.credit-list.venues span{ font-size:13px; color:var(--muted); text-align:right; white-space:nowrap; }
 
 .strip{ margin-top:120px; overflow:hidden; }
 .strip-track{ display:flex; width:max-content; gap:8px; animation:scroll 70s linear infinite; }
